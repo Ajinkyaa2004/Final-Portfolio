@@ -31,6 +31,9 @@ html {
     align-items: center;
     padding: 15px 30px;
     z-index: 1000;
+    background-color:#eff1f8;
+    box-shadow: 0 4px 6px rgba(214, 214, 214, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    height: 50px;
 }
 
 /* Logo styling */
@@ -46,6 +49,7 @@ html {
 .nav {
     display: flex;
     gap: 15px;
+    
 }
 
 .nav a {
@@ -196,10 +200,11 @@ html {
 }
 .social-bar {
     position: absolute;
+    text-decoration: none;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #323ec8;
+    background-color:#c0d6f9; 
     padding: 1px 0;
     display: flex;
     justify-content: center;
@@ -207,27 +212,41 @@ html {
     color: #ffffff;
     font-size: 30px;
     font-family: "IBM Plex Serif", serif;
-   
 }
 .social-bar .fa-instagram:hover{
     transition:0.5s ease;
-    color: #ff00dd;
     transform:scale(1.1);  
+}
+.social-bar .fa-instagram{
+    text-decoration: none;
+    color: #ff00dd;
+    font-weight: 900;
+}
+.social-bar .fa-x-twitter{
+    text-decoration: none;
+    color: #000000;
+    font-weight: 900;
+
 }
 .social-bar .fa-linkedin:hover{
     transition:0.5s ease;
-    color: #0062ff;
+    
     transform:scale(1.1);  
+}
+.social-bar .fa-linkedin{
+    text-decoration: none;
+    color: #040083;
+    font-weight: 900;
+
 }
 .social-bar .fa-youtube:hover{
     transition:0.5s ease;
-    color: #ff0000;
     transform:scale(1.1);  
 }
-.social-bar .fa-facebook:hover{
-    transition:0.5s ease;
-    color: #004cff;
-    transform:scale(1.1);  
+.social-bar .fa-youtube{
+    text-decoration: none;
+    color: #ff0000;
+    font-weight: 900;
 }
 
 .greeting {
@@ -714,7 +733,7 @@ html {
         font-size: 30px;
         position: fixed;
         color: #0c278a;
-        top: 20px;
+        top: 5px;
         right: 20px; /* Keep hamburger at the right */
         cursor: pointer;
         z-index: 1001; /* Ensure it’s above other elements */

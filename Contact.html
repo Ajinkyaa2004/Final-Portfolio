@@ -19,8 +19,8 @@
         <div class="close-btn">&times;</div> <!-- Close button -->
         <nav class="nav">
             <a href="index.html" class="active">ABOUT ME</a>
-            <a href="#education">EDUCATION</a> <!-- Updated link -->
-            <a href="#Skills">SKILLS</a>
+            <a href="index.html#education">EDUCATION</a> <!-- Updated link -->
+            <a href="index.html#Skills">SKILLS</a>
             <a href="Project.html">PROJECTS</a>
             <a href="Achievements.html">ACHIEVEMENTS</a>
             <a href="Contact.html">CONTACT</a>
@@ -31,23 +31,7 @@
     
     
     
-    <script>
-        // JavaScript to add the active class to the current page link
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentPage = window.location.pathname.split("/").pop(); // Get the current page filename
-            const navLinks = document.querySelectorAll('.nav a');
-    
-            navLinks.forEach(link => {
-                // Remove 'active' class from all links
-                link.classList.remove('active');
-                
-                // Add 'active' class to the current page link
-                if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+  
     
     <script>
        let lastScrollY = window.scrollY;

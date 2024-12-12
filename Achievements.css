@@ -31,6 +31,9 @@ html {
     align-items: center;
     padding: 15px 30px;
     z-index: 1000;
+    background-color:#eff1f8;
+    box-shadow: 0 4px 6px rgba(214, 214, 214, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    height: 50px;
 }
 
 /* Logo styling */
