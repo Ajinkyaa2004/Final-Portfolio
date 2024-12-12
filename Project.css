@@ -6,7 +6,7 @@
     font-family: "Roboto Mono", serif;
 }
 body {
-    background-color: #f5f5f5;
+    background-color: #eff1f8;
 }
 html {
     scroll-behavior: smooth; /* Enables smooth scrolling */
@@ -20,6 +20,7 @@ html {
 
 
 
+/* Header styling */
 .header {
     position: fixed;
     top: 0;
@@ -29,119 +30,84 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background-color: #1a237e;
-    font-family: "IBM Plex Serif", serif;
     z-index: 1000;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-}
-
-.hidden {
-    transform: translateY(-100%);
-}
-
-.scrolled {
-    background-color: #0d1337; /* Slightly darker on scroll */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Logo styling */
 .logo {
-    color: #e7e7e7;
-    font-size: 25px;
+    color: #010101; /* Blue color */
+    font-size: 30px;
     font-weight: bold;
-    transition: transform 0.3s ease, letter-spacing 0.3s ease;
     font-family: "Birthstone", cursive;
 }
 
-.scrolled .logo {
-    transform: scale(1.2);
-    letter-spacing: 2px;
+/* Navbar styling */
+/* Navbar styling */
+.nav {
+    display: flex;
+    gap: 15px;
 }
 
-/* Navbar link styling */
 .nav a {
-    position: relative;
-    color: #fff;
+    color: #040530; /* Blue color for text */
     text-decoration: none;
-    margin: 0 15px;
     font-size: 16px;
     padding: 5px 0;
-    transition: color 0.4s ease, transform 0.3s ease;
-    overflow: hidden;
+    margin-left:25px;
+    font-weight: 400;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-/* Gradient underline effect */
-.nav a::before {
+/* Underline effect on hover */
+.nav a::after {
     content: '';
     position: absolute;
-    left: 50%;
+    left: 0;
     bottom: 0;
     width: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #ffffff, #ffffff, #ffffff, #ffffff);
-    transition: width 0.4s ease, left 0.4s ease;
-    border-radius: 2px;
+    height: 2px;
+    background-color: #0062ff; /* Blue underline */
+    transition: width 0.3s ease;
 }
 
-/* Hover effect for color and underline */
+.nav a:hover::after {
+    width: 100%; /* Full-width underline on hover */
+    font-weight: 900;
+}
+
 .nav a:hover {
-    color: #d5d6e1; /* Glowing text effect */
-}
-
-.nav a:hover::before {
-    width: 100%;
-    left: 0;
-    box-shadow: 0 0 8px rgb(1, 37, 154); /* Soft glow shadow */
-}
-
-/* Scrolled effect for links */
-.scrolled .nav a {
-    transform: translateY(-2px);
+    color:#0062ff; /* Ensure the text remains blue */
+    font-weight: 900;
 }
 
 /* Active link styling */
 .nav a.active {
-    color: #d5d6e1; /* Glowing text effect */
-    font-weight: bold;
-    position: relative; /* Ensure pseudo-elements are positioned correctly */
+    font-weight: bold; /* Make the active label bold */
+    color: #0062ff;/* Ensure the text is blue */
 }
 
-.nav a.active::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%; /* Full underline width */
-    height: 3px;
-    background: linear-gradient(90deg, #ffffff, #ffffff, #ffffff, #ffffff);
-    border-radius: 2px;
-    box-shadow: 0 0 8px rgb(1, 37, 154); /* Soft glow shadow */
-    transition: width 0.4s ease, left 0.4s ease;
+.nav a.active::after {
+    width: 100%; /* Show a full underline for active state */
 }
 
 
-/* Hover effect for color and underline */
-.nav a:hover {
-    color: #d5d6e1; /* Glowing text effect */
-}
-
-.nav a:hover::before {
-    width: 100%;
-    left: 0;
-    box-shadow: 0 0 8px rgb(1, 37, 154); /* Soft glow shadow */
-}
 
 /* Scrolled effect for links */
 .scrolled .nav a {
     transform: translateY(-2px);
 }
-
 /* General styles */
 .hamburger,
 .close-btn {
     display: none; /* Initially hide both icons */
 }
+
+
+
+
+
+
 
 
 
@@ -302,13 +268,20 @@ button:hover {
 
 
 
-
 /* For smaller screens (e.g., 428x926) */
 @media screen and (max-width: 428px) {
+    main {
+        background-color: #eff1f8;;
+        background-size: cover; /* Ensures the image covers the entire screen */
+        background-position: center center; /* Centers the image */
+        background-repeat: no-repeat;
+        height: 100vh; /* Ensures the background covers the full viewport height */
+    }
     .hamburger {
         display: block; /* Show hamburger menu on small screens */
         font-size: 30px;
         position: fixed;
+        color: #0c278a;
         top: 20px;
         right: 20px; /* Keep hamburger at the right */
         cursor: pointer;
@@ -320,6 +293,7 @@ button:hover {
         font-size: 30px;
         position: fixed;
         top: 20px;
+        color: #0c278a;
         right: 20px; /* Keep close button at the right */
         cursor: pointer;
         z-index: 1001;
@@ -328,7 +302,7 @@ button:hover {
     .nav {
         display: none; /* Hide the nav links by default */
         flex-direction: column; /* Make nav links stack vertically */
-        background-color: #1a237e; /* Match your navbar color */
+        background-color:#eff1f8; /* Match your navbar color */
         width: 100%;
         height: 100%;
         position: fixed;
@@ -355,6 +329,7 @@ button:hover {
         display: none; /* Hide hamburger button when menu is active */
     }
 }
+
 
 
 

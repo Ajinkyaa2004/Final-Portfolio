@@ -3,13 +3,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "IBM Plex Serif", serif;
+    font-family: "Roboto Mono", serif;
 }
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
+    background-color: #eff1f8;
 }
 html {
     scroll-behavior: smooth; /* Enables smooth scrolling */
@@ -23,6 +20,7 @@ html {
 
 
 
+/* Header styling */
 .header {
     position: fixed;
     top: 0;
@@ -32,291 +30,265 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background-color: #1a237e;
-    font-family: "IBM Plex Serif", serif;
     z-index: 1000;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-}
-
-.hidden {
-    transform: translateY(-100%);
-}
-
-.scrolled {
-    background-color: #0d1337; /* Slightly darker on scroll */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Logo styling */
 .logo {
-    color: #e7e7e7;
-    font-size: 25px;
+    color: #0062ff;  /* Blue color */
+    font-size: 30px;
     font-weight: bold;
-    transition: transform 0.3s ease, letter-spacing 0.3s ease;
     font-family: "Birthstone", cursive;
 }
 
-.scrolled .logo {
-    transform: scale(1.2);
-    letter-spacing: 2px;
+/* Navbar styling */
+/* Navbar styling */
+.nav {
+    display: flex;
+    gap: 15px;
 }
 
-/* Navbar link styling */
 .nav a {
-    position: relative;
-    color: #fff;
+    color: #040530; /* Blue color for text */
     text-decoration: none;
-    margin: 0 15px;
     font-size: 16px;
     padding: 5px 0;
-    transition: color 0.4s ease, transform 0.3s ease;
-    overflow: hidden;
+    margin-left:25px;
+    font-weight: 400;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-/* Gradient underline effect */
-.nav a::before {
+/* Underline effect on hover */
+.nav a::after {
     content: '';
     position: absolute;
-    left: 50%;
+    left: 0;
     bottom: 0;
     width: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #ffffff, #ffffff, #ffffff, #ffffff);
-    transition: width 0.4s ease, left 0.4s ease;
-    border-radius: 2px;
+    height: 2px;
+    background-color:#0062ff; /* Blue underline */
+    transition: width 0.3s ease;
 }
 
-/* Hover effect for color and underline */
+.nav a:hover::after {
+    width: 100%; /* Full-width underline on hover */
+    font-weight: 900;
+}
+
 .nav a:hover {
-    color: #d5d6e1; /* Glowing text effect */
-}
-
-.nav a:hover::before {
-    width: 100%;
-    left: 0;
-    box-shadow: 0 0 8px rgb(1, 37, 154); /* Soft glow shadow */
-}
-
-/* Scrolled effect for links */
-.scrolled .nav a {
-    transform: translateY(-2px);
+    color: #0062ff; /* Ensure the text remains blue */
+    font-weight: 900;
 }
 
 /* Active link styling */
 .nav a.active {
-    color: #d5d6e1; /* Glowing text effect */
-    font-weight: bold;
+    font-weight: bold; /* Make the active label bold */
+    color: #0062ff; /* Ensure the text is blue */
 }
 
-.nav a.active::before {
-    width: 100%;
-    left: 0;
-    box-shadow: 0 0 8px rgb(1, 37, 154); /* Soft glow shadow */
+.nav a.active::after {
+    width: 100%; /* Show a full underline for active state */
 }
 
 
-/* Hover effect for color and underline */
-.nav a:hover {
-    color: #d5d6e1; /* Glowing text effect */
-}
-
-.nav a:hover::before {
-    width: 100%;
-    left: 0;
-    box-shadow: 0 0 8px rgb(1, 37, 154); /* Soft glow shadow */
-}
 
 /* Scrolled effect for links */
 .scrolled .nav a {
     transform: translateY(-2px);
 }
-
-
-
-
-
-
-
-
-
-.certificates-section {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #ffffff;
-    margin: 20px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 1400px;
-    height: 600px;
-    
-  }
-  
-  #head h1{
-    font-size: 32px;
-    margin-top: 130px;
-    text-align: center;
-    font-family: "IBM Plex Serif", serif;
-    color: #162264;
-  }
-  
-  .certificate-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .certificate-card {
-    position: relative;
-    width: 350px;
-    height: 250px;
-    background: linear-gradient(135deg, rgba(1, 37, 154, 0.1), #ffffff);
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(1, 37, 154, 0.2);
-    overflow: hidden;
-    transform: translateY(30px);
-    opacity: 0;
-    transition: transform 0.6s ease-out, opacity 0.6s ease-out, box-shadow 0.3s ease;
-    margin-bottom: 20px;
-  }
-  
-  /* Static Description */
-  .certificate-card .static-description {
-    padding: 15px;
-    text-align: center;
-    font-size: 16px;
-    color: rgba(1, 37, 154, 0.8);
-    position: absolute;
-    top: 20px;  /* Adjust as needed */
-    width: 100%;
-    background: transparent;
-    font-weight: normal;
-  }
-  
-  /* Hover and animation effects */
-  .certificate-card.visible {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  
-  .certificate-card:hover {
-    box-shadow: 0 15px 30px rgba(1, 37, 154, 0.3);
-    transform: translateY(-5px);
-  }
-  
-  .certificate-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(100%);
-    transition: transform 0.5s ease, filter 0.5s ease;
-  }
-  
-  .certificate-card:hover img {
-    transform: scale(1.1);
-    filter: grayscale(0%);
-  }
-  
-  /* Certificate Details */
-  .certificate-card .certificate-details {
-    padding: 20px;
-    text-align: center;
-    background: rgba(1, 37, 154, 0.8);
-    color: white;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    transform: translateY(100%);
-    transition: transform 0.4s ease-in-out;
-  }
-  
-  .certificate-card:hover .certificate-details {
-    transform: translateY(0);
-  }
-  
-  /* Overlay */
-  .certificate-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(1, 37, 154, 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 1s ease;
-  }
-  
-  .certificate-card:hover .certificate-overlay {
-    opacity: 1;
-  }
-  
-  .certificate-overlay button {
-    padding: 5px 10px;
-    border: none;
-    background-color: #ffffff;
-    color: rgb(1, 37, 154);
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(1, 37, 154, 0.2);
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-   
-  .certificate-overlay button:hover {
-    background-color: rgb(1, 37, 154);
-    color: #ffffff;
-  }
-  .p{
-    font-size: 10px;
-    text-align: center;
-    margin-bottom: 30px;
-    margin-top: 250px;
-}
-  
-  
-  
-  
-
-
-
-
-
-body {
-    background-image: url('Images/image1_after.jpg');
-    background-size: cover;      /* Makes the image cover the entire screen */
-    background-position: center; /* Centers the image */
-    background-attachment: fixed; /* Keeps the image fixed while scrolling */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-}
-
-
-
-
-
-
-
-
-
-
-
-
 /* General styles */
 .hamburger,
 .close-btn {
     display: none; /* Initially hide both icons */
 }
 
+
+
+
+
+
+
+#head h1{
+    font-size: 32px;
+    font-family: "IBM Plex Serif", serif;
+    color: #121c56;
+    
+    text-align: center;
+    margin-top: 130px;
+}
+
+.certificates-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color:#eff1f8;
+    margin-top: 23px;
+    margin-left: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1400px;
+    height: 900px; 
+  }
+ 
+.wrapper {
+    display: flex;
+    margin-left: 70px;
+    flex-wrap: wrap; /* Enables wrapping to the next row */
+    width: 90%;
+    justify-content: center; /* Centers the content */
+    gap: 80px; /* Adds spacing between cards */
+}
+
+.card {
+    width: 350px;
+    height: 300px;
+    border-radius: 15px;
+    padding: 1.5rem;
+    background: #eff1f8;;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    transition: 0.4s ease-out;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+
+    opacity: 0; /* Hide initially */
+    transform: translateX(-120%); /* Start off-screen to the left */
+    transition: transform 1s ease-out, opacity 1s ease-out; /* Smooth transition */
+  }
+  .card.visible {
+  opacity: 1;
+  transform: translateX(0); /* Move to its original position */
+}
+
+
+
+/* Center the second row */
+.card:nth-child(4), .card:nth-child(5) {
+    order: 1; /* Ensures alignment is handled flexibly */
+}
+
+.card:hover {
+    transform: translateY(20px);
+}
+
+.card:hover:before {
+    opacity: 1;
+}
+
+.card:hover .info {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+}
+
+.info {
+    position: relative;
+    z-index: 3;
+    color: white;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s;
+}
+
+.info h1 {
+    margin: 0;
+}
+
+.info p {
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+.info button {
+    padding: 0.6rem;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+    margin-top: 25px;
+}
+
+.info button:hover {
+    background: dodgerblue;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+.q p{
+    font-size: 10px;
+    font-family:  "IBM Plex Serif", serif;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom:50px;
+}
+.q p span{
+    color: #004cff;
+    font-weight: 500;
+}
+
+  
+  
+
+
+
+
+
+
+
+
+
+
 /* For smaller screens (e.g., 428x926) */
 @media screen and (max-width: 428px) {
+    main {
+        background-color: #eff1f8;;
+        background-size: cover; /* Ensures the image covers the entire screen */
+        background-position: center center; /* Centers the image */
+        background-repeat: no-repeat;
+        height: 100vh; /* Ensures the background covers the full viewport height */
+    }
     .hamburger {
         display: block; /* Show hamburger menu on small screens */
         font-size: 30px;
         position: fixed;
+        color: #0c278a;
         top: 20px;
         right: 20px; /* Keep hamburger at the right */
         cursor: pointer;
@@ -328,6 +300,7 @@ body {
         font-size: 30px;
         position: fixed;
         top: 20px;
+        color: #0c278a;
         right: 20px; /* Keep close button at the right */
         cursor: pointer;
         z-index: 1001;
@@ -336,7 +309,7 @@ body {
     .nav {
         display: none; /* Hide the nav links by default */
         flex-direction: column; /* Make nav links stack vertically */
-        background-color: #1a237e; /* Match your navbar color */
+        background-color:#eff1f8; /* Match your navbar color */
         width: 100%;
         height: 100%;
         position: fixed;
@@ -364,6 +337,87 @@ body {
     }
 }
 
+
+  
+
+
+
+
+
+
+
+
+
+@media (max-width: 428px) {
+    .certificates-section {
+      padding: 20px;
+      margin-left: 10px;
+      margin-top: 10px;
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .wrapper {
+      margin-left: 0;
+      flex-direction: column; /* Stack the cards vertically */
+      gap: 50px; /* Add space between cards */
+      justify-content: flex-start;
+    }
+  
+    .card {
+      width: 100%; /* Make each card take up full width */
+      height: 250px; /* Adjust card height */
+      padding: 1rem; /* Adjust padding */
+      opacity: 1; /* Ensure cards are visible by default */
+      transform: translateX(0); /* Ensure cards are in their position */
+      transition: none; /* Remove transition for better performance */
+    }
+  
+    .card img {
+      width: 100%; /* Ensure images stretch fully */
+      height: 100%; /* Adjust height to fit within the card */
+      object-fit: cover;
+    }
+  
+    .info {
+      font-size: 14px; /* Reduce font size */
+      color: white;
+    }
+  
+    .info h1 {
+      font-size: 18px; /* Smaller heading font */
+      margin: 0;
+    }
+  
+    .info p {
+      font-size: 12px; /* Smaller text for better readability */
+      letter-spacing: 1px;
+      margin-top: 8px;
+    }
+  
+    .info button {
+      padding: 0.5rem; /* Adjust button size */
+      font-size: 14px; /* Adjust button text size */
+    }
+  
+    .card:hover {
+      transform: translateY(15px); /* Smaller hover effect */
+    }
+  
+    .card:before {
+      background: rgba(0, 0, 0, 0.5); /* Slightly less dark overlay */
+    }
+  
+    .card.visible {
+      opacity: 1; /* Make cards visible when they are in view */
+      transform: translateX(0); /* Ensure they stay in position */
+    }
+  
+    /* Ensure the cards are centered if wrapped into a single column */
+    .wrapper {
+      align-items: center;
+    }
+  }
   
 
 
@@ -375,63 +429,3 @@ body {
 
 
 
-
-
-
-
-
-
-@media screen and (max-width: 428px) {
-   
-
-    .certificates-section {
-        padding: 20px 10px;
-        margin-top: 20px;
-        max-width: 100%;
-        height: auto;
-    }
-
-    .p h1 {
-        font-size: 28px; /* Slightly smaller title for small screens */
-        margin-top: 80px; /* Adjust for better alignment */
-        color: #162264;
-    }
-
-    .certificate-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly; /* Space cards evenly */
-        gap: 15px;
-    }
-
-    .certificate-card {
-        width: 100%; /* Full width for smaller screens */
-        max-width: 320px; /* Limit width to maintain balance */
-        height: 220px; /* Adjust height for better fit */
-        margin-bottom: 15px; /* Reduced margin */
-        transform: translateY(0); /* Ensure visible on load */
-        box-shadow: 0 8px 15px rgba(1, 37, 154, 0.2); /* Slightly reduced shadow */
-    }
-
-    .certificate-card .static-description {
-        font-size: 14px; /* Smaller font for description */
-        padding: 10px;
-        color: rgba(1, 37, 154, 0.7);
-    }
-
-    .certificate-card .certificate-details {
-        padding: 10px;
-        font-size: 14px; /* Smaller font for details */
-    }
-
-    .certificate-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .certificate-overlay button {
-        padding: 6px 12px;
-        font-size: 14px; /* Smaller button font */
-    }
-}

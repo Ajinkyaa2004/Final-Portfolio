@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Ajinkya Dhumal</title>
     <link rel="stylesheet" type="text/css" href="Index.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a964bfb21f.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="Images/325924AC-6648-4D48-A141-D52F6CBB439E_4_5005_c.jpeg">
 </head>
 
 <body>
@@ -69,7 +72,6 @@ window.addEventListener('scroll', () => {
         // Remove scrolled effect
         header.classList.remove('scrolled');
     }
-
     lastScrollY = window.scrollY;
 });
 
@@ -321,40 +323,64 @@ window.addEventListener('scroll', handleScroll);
 </div>
 
 <div class="section expertise">
-        <h2 class="section-title">EXPERTISE !</h2>
-        <div class="expertise-container">
-            
-            <div class="expertise-item">
-                <div class="expertise-title">Java Development</div>
-                <p class="expertise-description">
-                    I am a Java programming expert with deep knowledge of core Java concepts, object-oriented programming, and design patterns. I specialize in developing robust, scalable applications using frameworks like Spring and Hibernate, and I am proficient in modern development tools like IntelliJ IDEA and Maven.
-                </p>
+    <div class="expertise">
+        <h2 class="expertise-title">My Expertise!</h2>
+        <div class="cards-container">
+            <!-- First Card -->
+
+            <div class="cards">
+                <div class="bg">
+                    <h5>Java Development</h5>
+                    <p>
+                        I am a Java programming expert with deep knowledge of core Java concepts, object-oriented programming, 
+                        and design patterns. I specialize in developing robust, scalable applications using frameworks like 
+                        Spring and Hibernate, and I am proficient in modern development tools like IntelliJ IDEA and Maven.
+                    </p>
+                </div>
+                <div class="blob"></div>
             </div>
-            <div class="expertise-item">
-                <div class="expertise-title">Frontend Development</div>
-                <p class="expertise-description">
-                    I am a frontend development expert with strong proficiency in HTML, CSS, and JavaScript, along with modern frameworks like React and Angular. I specialize in creating responsive, user-friendly interfaces with a focus on performance and accessibility. Passionate about delivering seamless user experiences.
-                </p>
+    
+            <!-- Second Card -->
+            <div class="cards">
+                <div class="bg">
+                    <h5>Frontend Development</h5>
+                    <p>
+                        I am a frontend development expert with strong proficiency in HTML, CSS, and JavaScript, along with modern 
+                        frameworks like React and Angular. I specialize in creating responsive, user-friendly interfaces with a 
+                        focus on performance and accessibility. Passionate about delivering seamless user experiences.
+
+                    </p>
+                </div>
+                <div class="blob"></div>
             </div>
-            <div class="expertise-item">
-                <div class="expertise-title">Adobe </div>
-                <p class="expertise-description">
-                    I am an Adobe expert skilled in using tools like Photoshop, Illustrator, and After Effects to create visually compelling designs and animations. I specialize in graphic design, video editing, and branding, combining creativity with technical &nbsp expertise to produce high-quality, &nbsp impactful &nbsp visuals.
-                   </p>
+    
+            <!-- Third Card -->
+            <div class="cards">
+                <div class="bg">
+                    <h5>Adobe</h5>
+                    <p>
+                        I am an Adobe expert skilled in using tools like Photoshop, Illustrator, and After Effects to create visually compelling designs 
+                        and animations. I specialize in graphic design, video editing, and branding, combining creativity with technical   
+                        expertise to produce high-quality,   impactful   visuals.
+                        
+                    </p>
+                </div>
+                <div class="blob"></div>
             </div>
         </div>
-        <div class="p">
-        <p><-- All Rights Reserved @ Ajinkya-Dhumal --> <br>
-           <-- HTML - CSS - JAVASCRIPT -->
-        </p>
-        </div>
+    </div>
+</div>   
+
+
+<div class="q">
+    <p><-- All Rights Reserved <span>@ Ajinkya-Dhumal</span>--> <br>
+       <-- HTML - CSS - JAVASCRIPT -->
+    </p>
 </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
     const skillItems = document.querySelectorAll('.skill');
-    const expertiseItems = document.querySelectorAll('.expertise-item');
-
     // Create Intersection Observer
     const observer = new IntersectionObserver(
         (entries) => {
@@ -376,13 +402,12 @@ window.addEventListener('scroll', handleScroll);
         observer.observe(item);
     });
 
-    // Observe expertise items
-    expertiseItems.forEach((item) => {
-        observer.observe(item);
-    });
+  
 });
-
 </script>
+
+
+
 
 </body>
 
