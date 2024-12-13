@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto Mono", serif;
+    
 }
 body {
     background-color: #eff1f8;
@@ -58,6 +58,7 @@ html {
     padding: 5px 0;
     margin-left:25px;
     font-weight: 400;
+    font-family: "Roboto Mono", serif;
     position: relative;
     transition: color 0.3s ease;
 }
