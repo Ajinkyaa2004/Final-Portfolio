@@ -220,23 +220,26 @@ html {
 .social-bar .fa-instagram{
     text-decoration: none;
     color: #ff00dd;
-    font-weight: 900;
+    font-weight: 500;
 }
 .social-bar .fa-x-twitter{
     text-decoration: none;
     color: #000000;
-    font-weight: 900;
+    font-weight: 500;
+}
+.social-bar .fa-x-twitter:hover{
+    transition:0.5s ease;
+    transform:scale(1.1);  
 
 }
 .social-bar .fa-linkedin:hover{
     transition:0.5s ease;
-    
     transform:scale(1.1);  
 }
 .social-bar .fa-linkedin{
     text-decoration: none;
-    color: #040083;
-    font-weight: 900;
+    color: #1864f0;
+    font-weight: 500;
 
 }
 .social-bar .fa-youtube:hover{
@@ -246,7 +249,7 @@ html {
 .social-bar .fa-youtube{
     text-decoration: none;
     color: #ff0000;
-    font-weight: 900;
+    font-weight: 500;
 }
 
 .greeting {
@@ -283,14 +286,16 @@ html {
     font-size: 32px;
     color: #1a237e;
     font-family: "IBM Plex Serif", serif;
+    /* font-family: "Comfortaa", sans-serif; */
+    margin-bottom: 10px;
 }
 
 .intro p {
-    color: #7e7e7e;
+    color: #565656;
     line-height: 1.6;
-    font-weight: 600;
-    font-size: 20px;
-    font-family: "IBM Plex Serif", serif;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: "Comfortaa", sans-serif;
 }
 
 /* Animation states */
@@ -388,12 +393,12 @@ html {
 }
 
 .description {
-    color: #666;
+    color: #2a2a2a;
     line-height: 1.9;
     font-size: 18px;
     max-width: 600px;
-    font-weight: 900;
-    font-family: "IBM Plex Serif", serif;
+    font-weight: 500;
+    font-family: "Comfortaa", sans-serif;
 }
 
 
@@ -600,12 +605,15 @@ html {
 }
 
 .bg h5 {
+    
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-bottom: 30px;
     color: #323ec8;
 }
 
 .bg p {
+    padding-left: 15px;
+    padding-right: 15px;
     font-size: 17px;
     font-family: "DynaPuff", system-ui;
     font-weight: 500;
@@ -743,7 +751,7 @@ html {
         display: none; /* Hide close button initially */
         font-size: 30px;
         position: fixed;
-        top: 20px;
+        top: 5px;
         color: #0c278a;
         right: 20px; /* Keep close button at the right */
         cursor: pointer;

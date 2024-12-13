@@ -73,10 +73,11 @@ window.addEventListener('scroll', () => {
 
 </script>
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const closeBtn = document.querySelector('.close-btn');
     const nav = document.querySelector('.nav');
+    const navLinks = document.querySelectorAll('.nav a'); // Select all navigation links
 
     // Open menu
     hamburger.addEventListener('click', () => {
@@ -92,20 +93,46 @@ window.addEventListener('scroll', () => {
         closeBtn.style.display = 'none';
     });
 
+    // Close menu when a nav link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 428) {
+                // Only close menu on smaller screens
+                nav.classList.remove('active');
+                hamburger.style.display = 'block';
+                closeBtn.style.display = 'none';
+            }
+        });
+    });
+
     // Ensure correct visibility on window resize
     window.addEventListener('resize', () => {
         if (window.innerWidth > 428) {
-            nav.classList.remove('active'); // Always show menu on larger screens
+            // For larger screens, hide hamburger and close button, and always show nav
+            nav.classList.remove('active');
             hamburger.style.display = 'none';
             closeBtn.style.display = 'none';
         } else {
-            hamburger.style.display = 'block'; // Show hamburger on smaller screens
+            // For smaller screens, show hamburger and hide close button
+            hamburger.style.display = 'block';
             closeBtn.style.display = 'none';
         }
     });
-});
 
-</script>
+    // Initial check for screen size on page load
+    if (window.innerWidth > 428) {
+        // For larger screens, hide hamburger and close button, and always show nav
+        nav.classList.remove('active');
+        hamburger.style.display = 'none';
+        closeBtn.style.display = 'none';
+    } else {
+        // For smaller screens, show hamburger and hide close button
+        hamburger.style.display = 'block';
+        closeBtn.style.display = 'none';
+    }
+});
+  
+  </script>
 
 <section id="head">
   <h1>ACHIEVEMENTS!</h1>

@@ -475,7 +475,7 @@ textarea::placeholder {
         font-size: 30px;
         position: fixed;
         color: #0c278a;
-        top: 20px;
+        top: 5px;
         right: 20px; /* Keep hamburger at the right */
         cursor: pointer;
         z-index: 1001; /* Ensure it’s above other elements */
@@ -485,7 +485,7 @@ textarea::placeholder {
         display: none; /* Hide close button initially */
         font-size: 30px;
         position: fixed;
-        top: 20px;
+        top: 5px;
         color: #0c278a;
         right: 20px; /* Keep close button at the right */
         cursor: pointer;
