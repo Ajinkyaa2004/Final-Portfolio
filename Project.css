@@ -180,7 +180,7 @@ html {
 }
 .project1 p {
     margin: 10px 0;
-    font-family: "EB Garamond", serif;
+    font-family: "Comfortaa", sans-serif;
     font-size: 20px;
     font-weight: 500;
 }
@@ -199,10 +199,11 @@ iframe{
     text-align: center;
     margin-bottom: 30px;
     margin-top: 250px;
+    font-family: "Comfortaa", sans-serif;
 }
 
 
-.github-button {
+/* .github-button {
     display: flex;
     align-items: center;
     background-color: #0a78e5;
@@ -233,7 +234,7 @@ iframe{
 .github-button:hover {
     background-color: #e3e8f9;;
     color: #0a78e5;
-}
+} */
 
 
 /* Keyframes for left-to-right animation */
@@ -260,6 +261,24 @@ iframe{
     opacity: 1;
     transform: translateX(0);
 }
+
+
+
+
+
+.q p{
+    font-size: 10px;
+    font-family:  "IBM Plex Serif", serif;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom:50px;
+}
+.q p span{
+    color: #004cff;
+    font-weight: 500;
+}
+
+
 
 
 
@@ -397,10 +416,11 @@ iframe{
         }
     
         .project1 p, .project2 p {
-            font-size: 16px; /* Smaller paragraph font size */
-            font-family: "EB Garamond", serif;
+            font-size: 15px; /* Smaller paragraph font size */
+            font-family: "Comfortaa", sans-serif;
             font-weight: 500;
             margin: 10px 0;
+
         }
     
         #projects .project1 h5, #projects .project2 h5 {
@@ -454,6 +474,7 @@ iframe{
             text-align: center;
             margin-top: 150px; /* Adjusted for better spacing */
             margin-bottom: 20px;
+            font-family: "Comfortaa", sans-serif;
         }
     }
 }    
