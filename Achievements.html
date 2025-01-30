@@ -80,56 +80,68 @@ window.addEventListener('scroll', () => {
 
 
 <script>
-   document.addEventListener('DOMContentLoaded', () => {
-            const hamburger = document.querySelector('.hamburger');
-            const closeBtn = document.querySelector('.close-btn');
-            const nav = document.querySelector('.nav');
-            const navLinks = document.querySelectorAll('.nav a');
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const closeBtn = document.querySelector('.close-btn');
+    const nav = document.querySelector('.nav');
+    const navLinks = document.querySelectorAll('.nav a');
 
-            // Function to toggle visibility based on screen size
-            const toggleMenuVisibility = () => {
-                if (window.innerWidth <= 430) {
-                    hamburger.style.display = 'block';
-                    closeBtn.style.display = 'none';
-                    nav.classList.remove('active');
-                } else {
-                    hamburger.style.display = 'none';
-                    closeBtn.style.display = 'none';
-                    nav.classList.remove('active');
-                }
-            };
+    // Function to toggle visibility based on screen size
+    const toggleMenuVisibility = () => {
+        if (window.innerWidth <= 430) {
+            hamburger.style.display = 'block';
+            closeBtn.style.display = 'none';
+            nav.classList.remove('active');
+        } else if (window.innerWidth > 430 && window.innerWidth <= 800) {
+            // Keep hamburger for smaller devices but show it with adjusted size or functionality
+            hamburger.style.display = 'block';
+            closeBtn.style.display = 'none';
+            nav.classList.remove('active');
+        } else if (window.innerWidth > 800 && window.innerWidth <= 1280) {
+            // Adjust for medium devices (e.g., tablets, smaller laptops)
+            hamburger.style.display = 'none';
+            closeBtn.style.display = 'none';
+            nav.classList.remove('active');
+        } else {
+            // For larger screens (above 1280px)
+            hamburger.style.display = 'none';
+            closeBtn.style.display = 'none';
+            nav.classList.remove('active');
+        }
+    };
 
-            // Open menu
-            hamburger.addEventListener('click', () => {
-                nav.classList.add('active');
-                hamburger.style.display = 'none';
-                closeBtn.style.display = 'block';
-            });
+    // Open menu
+    hamburger.addEventListener('click', () => {
+        nav.classList.add('active');
+        hamburger.style.display = 'none';
+        closeBtn.style.display = 'block';
+    });
 
-            // Close menu
-            closeBtn.addEventListener('click', () => {
+    // Close menu
+    closeBtn.addEventListener('click', () => {
+        nav.classList.remove('active');
+        hamburger.style.display = 'block';
+        closeBtn.style.display = 'none';
+    });
+
+    // Close menu when a nav link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 430 || (window.innerWidth > 430 && window.innerWidth <= 800)) {
                 nav.classList.remove('active');
                 hamburger.style.display = 'block';
                 closeBtn.style.display = 'none';
-            });
-
-            // Close menu when a nav link is clicked
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (window.innerWidth <= 430) {
-                        nav.classList.remove('active');
-                        hamburger.style.display = 'block';
-                        closeBtn.style.display = 'none';
-                    }
-                });
-            });
-
-            // Ensure correct visibility on window resize
-            window.addEventListener('resize', toggleMenuVisibility);
-
-            // Initial check for screen size on page load
-            toggleMenuVisibility();
+            }
         });
+    });
+
+    // Ensure correct visibility on window resize
+    window.addEventListener('resize', toggleMenuVisibility);
+
+    // Initial check for screen size on page load
+    toggleMenuVisibility();
+});
+
     </script>
 
 

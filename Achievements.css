@@ -361,6 +361,7 @@ html {
       padding: 20px;
       margin-left: 10px;
       margin-top: 10px;
+      margin-right: 10px;
       max-width: 100%;
       height: auto;
     }
@@ -378,7 +379,8 @@ html {
       padding: 1rem; /* Adjust padding */
       opacity: 1; /* Ensure cards are visible by default */
       transform: translateX(0); /* Ensure cards are in their position */
-      transition: none; /* Remove transition for better performance */
+      transition: none; 
+      margin-left: 20px;/* Remove transition for better performance */
     }
   
     .card img {
@@ -515,8 +517,9 @@ html {
       margin-top: 10px;
       max-width: 100%;
       height: auto;
+      margin-right: 10px;
     }
-  
+
     .wrapper {
       margin-left: 0;
       flex-direction: column; /* Stack the cards vertically */
@@ -531,6 +534,7 @@ html {
       opacity: 1; /* Ensure cards are visible by default */
       transform: translateX(0); /* Ensure cards are in their position */
       transition: none; /* Remove transition for better performance */
+      margin-left: 20px;
     }
   
     .card img {
@@ -578,14 +582,4 @@ html {
       align-items: center;
     }
 }
-
-
-
-
-
-
-
-
-
-
 
