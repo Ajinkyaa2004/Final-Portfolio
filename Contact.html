@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close menu when a nav link is clicked
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            if (window.innerWidth <= 428) {
+            if (window.innerWidth <= 430) {
                 // Only close menu on smaller screens
                 nav.classList.remove('active');
                 hamburger.style.display = 'block';
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Ensure correct visibility on window resize
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 428) {
+        if (window.innerWidth > 430) {
             // For larger screens, hide hamburger and close button, and always show nav
             nav.classList.remove('active');
             hamburger.style.display = 'none';
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Initial check for screen size on page load
-    if (window.innerWidth > 428) {
+    if (window.innerWidth > 430) {
         // For larger screens, hide hamburger and close button, and always show nav
         nav.classList.remove('active');
         hamburger.style.display = 'none';
@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         closeBtn.style.display = 'none';
     }
 });
+
 </script>
 
 

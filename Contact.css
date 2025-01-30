@@ -615,3 +615,152 @@ textarea::placeholder {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+  /* For smaller screens (e.g., 430x932) */
+@media screen and (max-width: 430px) {
+  main {
+      background-color: #eff1f8;
+      background-size: cover; /* Ensures the image covers the entire screen */
+      background-position: center center; /* Centers the image */
+      background-repeat: no-repeat;
+      height: 100vh; /* Ensures the background covers the full viewport height */
+  }
+  .hamburger {
+      display: block; /* Show hamburger menu on small screens */
+      font-size: 30px;
+      position: fixed;
+      color: #0c278a;
+      top: 5px;
+      right: 20px; /* Keep hamburger at the right */
+      cursor: pointer;
+      z-index: 1001; /* Ensure it’s above other elements */
+  }
+
+  .close-btn {
+      display: none; /* Hide close button initially */
+      font-size: 30px;
+      position: fixed;
+      top: 5px;
+      color: #0c278a;
+      right: 20px; /* Keep close button at the right */
+      cursor: pointer;
+      z-index: 1001;
+  }
+
+  .nav {
+      display: none; /* Hide the nav links by default */
+      flex-direction: column; /* Make nav links stack vertically */
+      background-color: #eff1f8; /* Match your navbar color */
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      padding: 50px 20px;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+  }
+
+  .nav.active {
+      display: flex; /* Show nav links when active */
+      transform: translateX(0); /* Slide into view */
+  }
+
+  /* When navbar is active, show close button */
+  .nav.active + .close-btn {
+      display: block; /* Show close button when menu is active */
+  }
+
+  /* Hide hamburger button when menu is open */
+  .nav.active + .close-btn + .hamburger {
+      display: none; /* Hide hamburger button when menu is active */
+  }
+}
+
+@media (max-width: 430px) {
+  .container {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .form {
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr;
+    margin-top: 0;
+  }
+
+  .contact-info {
+    padding: 1.5rem;
+  }
+
+  .contact-form {
+    height: auto;
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .input-container input,
+  .input-container textarea {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    margin-left: 0;
+    padding: 0.7rem;
+  }
+
+  .social-icons {
+    margin-top: 1rem;
+  }
+
+  .social-icons a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 35px;
+  }
+
+  .contact-info:before {
+    display: none;
+  }
+
+  .square {
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(150%, 10%);
+  }
+
+  .social-media p {
+      color: #333;
+      margin-left: 100px;
+  }
+}
+
+
+
+
+
+
+
+  
+
+

@@ -437,3 +437,155 @@ html {
 
 
 
+
+
+
+
+
+
+
+
+  /* For smaller screens (e.g., 430x932) */
+@media screen and (max-width: 430px) {
+    main {
+        background-color: #eff1f8;
+        background-size: cover; /* Ensures the image covers the entire screen */
+        background-position: center center; /* Centers the image */
+        background-repeat: no-repeat;
+        height: 100vh; /* Ensures the background covers the full viewport height */
+    }
+    .hamburger {
+        display: block; /* Show hamburger menu on small screens */
+        font-size: 30px;
+        position: fixed;
+        color: #0c278a;
+        top: 5px;
+        right: 20px; /* Keep hamburger at the right */
+        cursor: pointer;
+        z-index: 1001; /* Ensure it’s above other elements */
+    }
+
+    .close-btn {
+        display: none; /* Hide close button initially */
+        font-size: 30px;
+        position: fixed;
+        top: 5px;
+        color: #0c278a;
+        right: 20px; /* Keep close button at the right */
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .nav {
+        display: none; /* Hide the nav links by default */
+        flex-direction: column; /* Make nav links stack vertically */
+        background-color:#eff1f8; /* Match your navbar color */
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        padding: 50px 20px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .nav.active {
+        display: flex; /* Show nav links when active */
+        transform: translateX(0); /* Slide into view */
+    }
+
+    /* When navbar is active, show close button */
+    .nav.active + .close-btn {
+        display: block; /* Show close button when menu is active */
+    }
+
+    /* Hide hamburger button when menu is open */
+    .nav.active + .close-btn + .hamburger {
+        display: none; /* Hide hamburger button when menu is active */
+    }
+}
+
+/* For 430x932 devices */
+@media (max-width: 430px) {
+    .certificates-section {
+      padding: 20px;
+      margin-left: 10px;
+      margin-top: 10px;
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .wrapper {
+      margin-left: 0;
+      flex-direction: column; /* Stack the cards vertically */
+      gap: 50px; /* Add space between cards */
+      justify-content: flex-start;
+    }
+  
+    .card {
+      width: 100%; /* Make each card take up full width */
+      height: 280px; /* Adjust card height */
+      padding: 1rem; /* Adjust padding */
+      opacity: 1; /* Ensure cards are visible by default */
+      transform: translateX(0); /* Ensure cards are in their position */
+      transition: none; /* Remove transition for better performance */
+    }
+  
+    .card img {
+      width: 100%; /* Ensure images stretch fully */
+      height: 100%; /* Adjust height to fit within the card */
+      object-fit: cover;
+    }
+  
+    .info {
+      font-size: 14px; /* Reduce font size */
+      color: white;
+    }
+  
+    .info h1 {
+      font-size: 18px; /* Smaller heading font */
+      margin: 0;
+    }
+  
+    .info p {
+      font-size: 12px; /* Smaller text for better readability */
+      letter-spacing: 1px;
+      margin-top: 8px;
+    }
+  
+    .info button {
+      padding: 0.5rem; /* Adjust button size */
+      font-size: 14px; /* Adjust button text size */
+    }
+  
+    .card:hover {
+      transform: translateY(15px); /* Smaller hover effect */
+    }
+  
+    .card:before {
+      background: rgba(0, 0, 0, 0.5); /* Slightly less dark overlay */
+    }
+  
+    .card.visible {
+      opacity: 1; /* Make cards visible when they are in view */
+      transform: translateX(0); /* Ensure they stay in position */
+    }
+  
+    /* Ensure the cards are centered if wrapped into a single column */
+    .wrapper {
+      align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
